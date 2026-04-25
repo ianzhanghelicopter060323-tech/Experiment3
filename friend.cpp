@@ -18,16 +18,16 @@ class Point
         ~Point() {}
 
         // friend function declearation
-        friend double getX(Point p);
-        friend double getY(Point p);
+        friend double getX(const Point &p);
+        friend double getY(const Point &p);
 };
 
 // friend function
-double getX(Point p)
+double getX(const Point &p)
 {
     return p.x;
 }
-double getY(Point p)
+double getY(const Point &p)
 {
     return p.y;
 }
@@ -66,7 +66,7 @@ public:
              << endl;
 
         cout << "p2 axis: "
-             << "(" << getY(p2) << ", " << getY(p2) << ")"
+             << "(" << getX(p2) << ", " << getY(p2) << ")"
              << endl;
     }
 };
