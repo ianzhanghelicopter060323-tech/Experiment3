@@ -44,3 +44,48 @@ void test()
 
 …… 
 ```
+# friend.cpp 要求
+## 一、实验要求
+
+1. 定义一个 `Point` 类，表示二维平面上的点。
+
+2. `Point` 类有两个私有数据成员：
+
+```cpp
+double x;
+double y;
+```
+
+3. 为 `Point` 类定义构造函数：
+
+```cpp
+Point(double x = 0, double y = 0);
+```
+
+4. 定义一个 `Segment` 类，表示线段。
+
+5. `Segment` 类中包含两个 `Point` 对象：
+
+```cpp
+Point p1;
+Point p2;
+```
+
+6. 将 `Segment` 类声明为 `Point` 类的友元类，使 `Segment` 的成员函数可以直接访问 `Point` 的私有成员 `x` 和 `y`。
+
+7. `Segment` 类需要实现以下成员函数：
+
+```cpp
+Segment(Point a, Point b);
+double length() const;
+void midpoint() const;
+void show() const;
+```
+
+其中：
+
+- `length()`：计算线段长度；
+- `midpoint()`：输出线段中点坐标；
+- `show()`：输出两个端点坐标。
+
+8. 在 `main()` 函数中创建两个 `Point` 对象，再创建一个 `Segment` 对象，测试所有成员函数。
